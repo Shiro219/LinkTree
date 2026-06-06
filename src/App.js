@@ -1,23 +1,80 @@
 import logo from './logo.svg';
 import './App.css';
+import profilePic from './pic.jpg';
+import  { 
+  FaGithub, 
+  FaLinkedin, 
+  FaPortfolio,
+  FaFilePdf, 
+  FaFacebook, 
+ 
+} 
+  from 'react-icons/fa';
 
 function App() {
+
+  // My social media links
+
+  const socialMediaLinks = [
+    {
+
+    url: 'https://github.com/Shiro219',
+    title: 'Github',
+    icon: <FaGithub />
+
+
+    //github: 'https://github.com/Shiro219',
+    // linkedin: 'linkedin.com/in/rull-mendez-083272332',
+    // portfolio: 'https://rullmendez.github.io/Portfolio/',
+    // resume: 'https://docs.google.com/document/d/1n9s8Xo2l3m5v6a7b8c9d0e1f2g3h4i5j6k7l8m9n0o/edit?usp=sharing',
+    //  facebook: 'https://www.facebook.com/rullanthony.mendezquispe',
+  },
+  {
+    url: 'https://www.linkedin.com/in/rull-mendez-083272332/',
+    title: 'LinkedIn',
+    icon: <FaLinkedin />
+  },
+  {
+    url: 'https://github.com/Project3Team5',
+    title: 'Portfolio',
+    icon: <FaGithub />
+  },
+  {
+    url: 'Rull_Mendez_Resume.pdf',
+    title: 'resume',
+    icon: <FaFilePdf />
+  },
+  {
+    url: 'https://www.facebook.com/rullanthony.mendezquispe',
+    title: 'Facebook',
+    icon: <FaFacebook />
+  }
+
+  ];
+
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="App-header container mx-auto">
+        <img src={profilePic} className="profile-picture w-20 h-20 mb-4 rounded-full" alt="profile picture" />
+        <div className="name text-2xl font-bold mb-2 text-slate-900">Rull Anthony Mendez Quispe</div>
+        <div className="description text-md mb-4 text-slate-900">Aspiring Software Developer | Passionate about Coding and Problem Solving</div>
+
+
+        <ul className="flex flex-col w-full">
+    
+        {
+          socialMediaLinks.map((link,index) => (
+            <li key= {index} className = 'cursor-pointer m-2 py-3 border-black border-2 text-sm md:text-md text-slate-900'>
+                <a href={link.url} className='flex items-center justify-center gap-2' title={link.title} target="_blank" rel="noreferrer"> 
+                   {link.icon} <p className = 'font-bold ml-3'> {link.title} </p> </a> 
+               </li>
+          ))
+        }
+        </ul>
+      </div>
     </div>
   );
 }
