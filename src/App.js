@@ -1,15 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
 import profilePic from './pic.jpg';
+import Switch from './Switch';
 import  { 
   FaGithub, 
   FaLinkedin, 
   FaPortfolio,
   FaFilePdf, 
-  FaFacebook, 
+  FaFacebook,
  
 } 
   from 'react-icons/fa';
+import { CgDarkMode } from 'react-icons/cg';
 
 function App() {
 
@@ -55,14 +57,19 @@ function App() {
 
 
 
-  return (
+  return ( 
+
     <div className="App">
+      
       <div className="App-header container mx-auto">
+        
+        <Switch/>
         <img src={profilePic} className="profile-picture w-20 h-20 mb-4 rounded-full" alt="profile picture" />
         <div className="name text-2xl font-bold mb-2 text-slate-900">Rull Anthony Mendez Quispe</div>
-        <div className="description text-md mb-4 text-slate-900">Aspiring Software Developer | Passionate about Coding and Problem Solving</div>
+        <div className="description text-md mb-4 text-slate-900">Aspiring Software Developer | Progress may be slow, but I'm always moving forward </div>
 
 
+        <div className="location text-lg font-semibold mb-4 text-slate-900" > Hollister, California</div>
         <ul className="flex flex-col w-full">
     
         {
@@ -76,6 +83,8 @@ function App() {
         </ul>
       </div>
     </div>
+       
+    
   );
 }
 

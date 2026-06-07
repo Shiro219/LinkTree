@@ -1,7 +1,7 @@
 .App {
   text-align: center;
-  background: #020024;
-  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+  /* background: #020024; */
+  /* background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%); */
 }
 
 .App-logo {
@@ -16,17 +16,18 @@
 }
 
 .App-header {
+  background-color: var(--body_background);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: var(--body_color);
 }
 
 .App-link {
-  color: #61dafb;
+  color: var(--link_color);
 }
 
 @keyframes App-logo-spin {
@@ -37,3 +38,4 @@
     transform: rotate(360deg);
   }
 }
+
