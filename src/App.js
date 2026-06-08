@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import profilePic from './pic.jpg';
+/* import { ReactComponent as Location } from "./Location.svg"; */
 import Switch from './Switch';
 import  { 
   FaGithub, 
@@ -8,6 +9,7 @@ import  {
   FaPortfolio,
   FaFilePdf, 
   FaFacebook,
+  FaLocationArrow,
  
 } 
   from 'react-icons/fa';
@@ -38,11 +40,11 @@ function App() {
   },
   {
     url: 'https://github.com/Project3Team5',
-    title: 'Portfolio',
+    title: 'Team Project',
     icon: <FaGithub />
   },
   {
-    url: 'Rull_Mendez_Resume.pdf',
+    url: 'Resume.pdf',
     title: 'resume',
     icon: <FaFilePdf />
   },
@@ -51,6 +53,7 @@ function App() {
     title: 'Facebook',
     icon: <FaFacebook />
   }
+
 
   ];
 
@@ -63,18 +66,18 @@ function App() {
       
       <div className="App-header container mx-auto">
         
-        <Switch/>
+        <Switch  />
         <img src={profilePic} className="profile-picture w-20 h-20 mb-4 rounded-full" alt="profile picture" />
-        <div className="name text-2xl font-bold mb-2 text-slate-900">Rull Anthony Mendez Quispe</div>
-        <div className="description text-md mb-4 text-slate-900">Aspiring Software Developer | Progress may be slow, but I'm always moving forward </div>
+        <div className="name text-2xl font-bold mb-2">Rull Anthony Mendez Quispe</div>
+        <div className="description text-md mb-4">Aspiring Software Developer | Progress may be slow, but I'm always moving forward </div>
 
 
-        <div className="location text-lg font-semibold mb-4 text-slate-900" > Hollister, California</div>
+        <div className="location flex items-center gap-2 text-lg font-semibold mb-4" > <FaLocationArrow className="w-5 h-5" /> Hollister, California</div>
         <ul className="flex flex-col w-full">
     
         {
           socialMediaLinks.map((link,index) => (
-            <li key= {index} className = 'cursor-pointer m-2 py-3 border-black border-2 text-sm md:text-md text-slate-900'>
+            <li key= {index} className = 'w-full max-w-md mx-auto m-2 py-3 border-black border-2 text-sm md:text-md text-slate-900' >
                 <a href={link.url} className='flex items-center justify-center gap-2' title={link.title} target="_blank" rel="noreferrer"> 
                    {link.icon} <p className = 'font-bold ml-3'> {link.title} </p> </a> 
                </li>

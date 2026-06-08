@@ -9,14 +9,27 @@
   pointer-events: none;
 }
 
+
+@media only screen and (max-width: 414px) {
+  .App-logo {
+    visibility: hidden;
+  }
+}
+
+
+/*
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
+*/
+
 .App-header {
-  background-color: var(--body_background);
+  position: relative;
+  background: var(--body_background);
+  /* background-color: var(--body_background); */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -39,3 +52,19 @@
   }
 }
 
+li {
+  background: var(--card_background);
+  color: var(--card_text);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,.15);
+}
+.switch {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
