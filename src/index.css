@@ -2,7 +2,8 @@
 @tailwind component;
 @tailwind utilities;
 
-
+/* Global styles and CSS variables for theming */
+/* Focus on the body background  and text color */
 :root {
   --body_background: linear-gradient(
   90deg,

@@ -6,7 +6,7 @@ import "./Switch.css";
 const Switch = () => {
     const setDarkMode = () => {
         document.querySelector('body').setAttribute('data-theme', 'dark')
-        localStorage.setItem("selectedTheme", "dark");
+        localStorage.setItem("selectedTheme", "dark");  /* Keeps the selected theme in local storage */
     };
     
     const setLightMode = () => {

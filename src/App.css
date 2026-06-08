@@ -1,7 +1,5 @@
 .App {
   text-align: center;
-  /* background: #020024; */
-  /* background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%); */
 }
 
 .App-logo {
@@ -9,7 +7,7 @@
   pointer-events: none;
 }
 
-
+/* Change the logo visibility on small screens */
 @media only screen and (max-width: 414px) {
   .App-logo {
     visibility: hidden;
@@ -17,19 +15,9 @@
 }
 
 
-/*
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-*/
-
 .App-header {
   position: relative;
   background: var(--body_background);
-  /* background-color: var(--body_background); */
   min-height: 100vh;
   display: flex;
   flex-direction: column;

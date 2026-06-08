@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
 import profilePic from './pic.jpg';
-/* import { ReactComponent as Location } from "./Location.svg"; */
 import Switch from './Switch';
 import  { 
   FaGithub, 
   FaLinkedin, 
-  FaPortfolio,
   FaFilePdf, 
   FaFacebook,
   FaLocationArrow,
  
 } 
   from 'react-icons/fa';
-import { CgDarkMode } from 'react-icons/cg';
 
 function App() {
-
-  // My social media links
 
   const socialMediaLinks = [
     {
@@ -26,12 +20,6 @@ function App() {
     title: 'Github',
     icon: <FaGithub />
 
-
-    //github: 'https://github.com/Shiro219',
-    // linkedin: 'linkedin.com/in/rull-mendez-083272332',
-    // portfolio: 'https://rullmendez.github.io/Portfolio/',
-    // resume: 'https://docs.google.com/document/d/1n9s8Xo2l3m5v6a7b8c9d0e1f2g3h4i5j6k7l8m9n0o/edit?usp=sharing',
-    //  facebook: 'https://www.facebook.com/rullanthony.mendezquispe',
   },
   {
     url: 'https://www.linkedin.com/in/rull-mendez-083272332/',
@@ -57,15 +45,12 @@ function App() {
 
   ];
 
-
-
-
+  /* Switch component for theme toggling, can change the theme of the app */
   return ( 
 
     <div className="App">
-      
+    
       <div className="App-header container mx-auto">
-        
         <Switch  />
         <img src={profilePic} className="profile-picture w-20 h-20 mb-4 rounded-full" alt="profile picture" />
         <div className="name text-2xl font-bold mb-2">Rull Anthony Mendez Quispe</div>
